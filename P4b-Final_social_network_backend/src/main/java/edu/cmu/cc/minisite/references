@@ -1,0 +1,132 @@
+{
+  "referenceGuide":"Cite all the reference sources in the required format. Proper citations will help you avoid unnecessary trouble but does not make it acceptable to copy code. Read the course and university policy statements in this regard. When working with others, limit the discussion to block diagrams and arrows. Do not look at another students' code. Read the JSON semantics and make use of JSON validator from the Internet if needed.",
+  "websites": [
+    {
+      "title": "MySQL Connector/J: Using Prepared Statements",
+      "url": "https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-usagenotes-preparedstatement.html",
+      "code": "Used to construct parameterized SQL queries for login validation and profile retrieval in getUserProfileFromMySQL().",
+      "description": "Ensures safe and efficient querying in MySQL using JDBC to prevent SQL injection."
+    },
+    {
+      "title": "Neo4j Java Reference Manual",
+      "url": "https://neo4j.com/docs/java-reference/current/",
+      "code": "Used to establish connection with Neo4j and query for followers and followees using Cypher queries in getFollowersFromNeo4j() and getFolloweesFromNeo4j().",
+      "description": "Provided API details for session handling and query execution via Neo4j Java Driver."
+    },
+    {
+      "title": "MongoDB Java Driver Aggregation",
+      "url": "https://www.mongodb.com/docs/drivers/java/sync/current/fundamentals/aggregation/",
+      "code": "Used for constructing aggregation pipelines in getTopCommentsFromMongo() for sorting and limiting comments.",
+      "description": "Helped implement MongoDB aggregation using $match, $sort, and $limit stages for top 30 comments."
+    },
+    {
+      "title": "Gson JsonObject addProperty",
+      "url": "https://www.javadoc.io/doc/com.google.code.gson/gson/latest/com/google/gson/JsonObject.html#addProperty(java.lang.String,java.lang.String)",
+      "code": "Used extensively in constructing the JSON response object in TimelineServlet and TimelineWithCacheServlet.",
+      "description": "Guided the correct usage of different overloads of addProperty for Strings, Numbers, and Booleans."
+    },
+    {
+      "title": "Java Servlet API - HttpServlet",
+      "url": "https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html",
+      "code": "Used for extending HttpServlet and overriding doGet() method in all servlet classes.",
+      "description": "Reference for handling HTTP GET requests and setting up servlets correctly."
+    },
+    {
+      "title": "Java DriverManager.getConnection",
+      "url": "https://docs.oracle.com/javase/8/docs/api/java/sql/DriverManager.html#getConnection-java.lang.String-java.lang.String-java.lang.String-",
+      "code": "Used to open MySQL connections in TimelineServlet and ProfileServlet constructors.",
+      "description": "Helped understand how to safely open and manage SQL connections with credentials."
+    },
+    {
+      "title": "MongoDB Read Operations - find()",
+      "url": "https://www.mongodb.com/docs/drivers/java/sync/current/fundamentals/crud/read-operations/find/",
+      "code": "Used in findCommentByCid() to retrieve parent and grandparent comment documents from MongoDB.",
+      "description": "Documentation for querying MongoDB collections and projecting specific fields."
+    },
+    {
+      "title": "Neo4j Cypher MATCH Clause",
+      "url": "https://neo4j.com/docs/cypher-manual/current/clauses/match/",
+      "code": "Used in writing Cypher queries to find followers and followees in getFollowersFromNeo4j() and getFolloweesFromNeo4j().",
+      "description": "Guided Cypher pattern syntax for relationship traversals."
+    },
+    {
+      "title": "MongoDB Aggregation Pipeline Stages",
+      "url": "https://www.mongodb.com/docs/manual/core/aggregation-pipeline/",
+      "code": "Used for constructing pipelines with $match, $sort, and $limit in getTopCommentsFromMongo().",
+      "description": "Helped in filtering and sorting top comments from followees efficiently."
+    },
+    {
+      "title": "Java instanceof Operator",
+      "url": "https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.20.2",
+      "code": "Used in convertDocumentToJsonObject() to determine data types while constructing JSON from MongoDB Documents.",
+      "description": "Clarified proper usage of type checking in Java for different MongoDB value types."
+    },
+    {
+      "title": "Azure Quickstart: Create a network security group and rules using the Azure portal",
+      "url": "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nsg-quickstart-portal",
+      "code": "Used while configuring network security groups to allow access to services such as MySQL, MongoDB, and Neo4j when deployed via Azure.",
+      "description": "Helped ensure proper port access and IP whitelisting during VM setup."
+    },
+    {
+      "title": "JDBC - Sample Code",
+      "url": "http://www.tutorialspoint.com/jdbc/jdbc-sample-code.htm",
+      "code": "Used as a reference for writing JDBC connection and query execution code in ProfileServlet and TimelineServlet.",
+      "description": "Provided baseline structure for connecting to MySQL and executing prepared statements."
+    },
+    {
+      "title": "PreparedStatement Interface - JavaTpoint",
+      "url": "https://www.javatpoint.com/PreparedStatement-interface",
+      "code": "Used in constructing parameterized queries in ProfileServlet and TimelineServlet to avoid SQL injection.",
+      "description": "Provided method descriptions and usage patterns for `PreparedStatement` in JDBC."
+    },
+    {
+      "title": "Neo4j Java Driver GitHub Repository",
+      "url": "https://github.com/neo4j/neo4j-java-driver",
+      "code": "Used to understand connection setup with Neo4j in FollowerServlet and TimelineServlet.",
+      "description": "Reviewed official Java driver code for proper instantiation and session handling."
+    },
+    {
+      "title": "Neo4j Java Developer Guide",
+      "url": "https://neo4j.com/developer/java/",
+      "code": "Referred for Cypher query examples and using Java driver to query Neo4j in TimelineServlet and FollowerServlet.",
+      "description": "Useful for syntax and API integration of Cypher queries in Java."
+    },
+    {
+      "title": "MongoDB Java Driver Sync API Guide",
+      "url": "https://docs.mongodb.com/drivers/java/sync/current/",
+      "code": "Used to write queries and aggregation pipelines in HomepageServlet and TimelineServlet.",
+      "description": "Primary reference for using the MongoDB Java driver for find and aggregation operations."
+    },
+    {
+      "title": "MongoDB createIndex()",
+      "url": "https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/",
+      "code": "Used to manually create indexes on fields like uid, cid for performance optimization in MongoDB.",
+      "description": "Provided syntax and index options for improving MongoDB read performance."
+    },
+    {
+      "title": "JSON Diff Tool",
+      "url": "http://www.jsondiff.com/",
+      "code": "Used to compare expected and actual JSON output during testing TimelineServlet and TimelineWithCacheServlet.",
+      "description": "Useful for debugging deeply nested JSON structures for correctness."
+    },
+    {
+      "title": "Neo4j Query Plan Caching",
+      "url": "https://neo4j.com/developer/kb/understanding-neo4j-query-plan-caching/",
+      "code": "Used to understand how Neo4j caches query execution plans to reduce latency for repeated queries.",
+      "description": "Helped reason about performance behavior when querying top users."
+    },
+    {
+      "title": "MongoDB Plan Cache Inspection",
+      "url": "https://docs.mongodb.com/manual/reference/method/js-plan-cache/",
+      "code": "Referenced to understand and inspect MongoDB's internal caching behavior for frequently run queries.",
+      "description": "Helped validate indexing effectiveness and identify query optimization needs."
+    }
+  ],
+  "collaborators":[
+    {
+      "andrewId":"No Collaboration",
+      "collaborationType":"N/A",
+      "description":"N/A"
+    }
+  ]
+}
